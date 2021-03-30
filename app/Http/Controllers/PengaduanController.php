@@ -47,7 +47,7 @@ class PengaduanController extends Controller
     }    
 
         $gambar->move($tujuan_upload ,$gambar->getClientOriginalName());
-        return redirect()->back()->with('alert_message', 'Berhasil Melakukan Pengaduan');
+        return redirect('/')->with('alert_message', 'Berhasil Melakukan Pengaduan');
 
     }
 

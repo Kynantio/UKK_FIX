@@ -55,17 +55,19 @@
                             @endforeach
                             </td>
                             <td>
-                            <ul>
                             @foreach($data->tanggapan as $tanggapan)
-                                <li>{{$tanggapan->tanggapan}}</li> 
+                            <div class="w-100 d-flex justify-content-between">
+                            <span>{{$tanggapan->tanggapan}}</span> 
+                            <a href="{{url('/tanggapan/edit/'. $tanggapan->id_tanggapan)}}">
+                            <i class="fas fa-fw fa-pen ml-auto"></i>
+                            </div>
+                            </a>
                             @endforeach
-                            </ul>
                             </td>
                             <td>{{$data->status}}</td>
                             <td>
                             <a href="{{url('/tanggapan/create/' . $data->id_pengaduan)}}" class="btn btn-success btn-sm btn-center-block">Tanggapan</a> 
                             <a href="{{url('/pengaduan/edit/'. $data->id_pengaduan)}}" class="btn btn-warning btn-sm btn-center-block">Ganti Status</a>
-                            <a href="{{url('/tanggapan/edit/'. $data->id_tanggapan)}}" class="btn btn-info btn-sm btn-center-block">Edit Tanggapan</a>
                             <a href="/pengaduan/hapus/{{ $data->id_pengaduan }}" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus data?')">Delete</a>
                             </td>
                         </tr>

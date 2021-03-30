@@ -26,8 +26,7 @@
             @endif
 
 	<div class="container">
-		<div class="placeholder">
-			<div class="parallax-window" style="background-color:grey;">
+			<div class="parallax-window" style="background-color:grey; min-height: 7rem">
 				<div class="tm-header">
 					<div class="row tm-header-inner">
 						<div class="col-md-6 col-12">
@@ -62,7 +61,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 
 		<div class="container">
 			@yield('container')
