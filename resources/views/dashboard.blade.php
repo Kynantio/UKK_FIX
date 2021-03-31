@@ -51,9 +51,9 @@
                                 </div>
                                 <div class="card-body">
                                 @if(Session::get('level')=='admin')
-                                    <p>Selamat Datang di Admin Page</p>
+                                    <p>Selamat Datang Admin</p>
                                 @else
-                                    <p>Selamat Datang di Petugas Page</p>
+                                    <p>Selamat Datang Petugas</p>
                                 @endif
                                 </div>
                             </div>

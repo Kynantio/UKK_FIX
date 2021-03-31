@@ -48,6 +48,12 @@
 										Login
 									</button>
 								</div>
+								<div class="mt-4 text-center">
+									Tidak memiliki akun? <a href="/register_masyarakat">Register</a>
+								</div>
+								<div class="mt-4 text-center">
+									Masuk sebagai masyarakat? <a href="/login_masyarakat">Login</a>
+								</div>
 							</form>
 						</div>
 					</div>

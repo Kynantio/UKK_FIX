@@ -28,7 +28,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Pengaduan Masyarakat</div>
+                <div class="sidebar-brand-text mx-3">Keluh Kesah Netizen</div>
             </a>
 
             <hr class="sidebar-divider my-0">
@@ -121,7 +121,7 @@
             </div>
 
             <footer class="tm-footer text-center">
-			<p>Muhammad Zidan Rakhi Ismed</p>
+			<p>Kynantio Candra Abrari</p>
 		</footer>
 
         </div>

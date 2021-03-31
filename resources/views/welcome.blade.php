@@ -12,7 +12,7 @@
 				<div class="row">
 					<!-- Welcome -->
 					<div class="col-12 tm-faq">
-						<h2 class="text-center tm-section-title">Web Pengaduan Masyarakat</h2>
+						<h2 class="text-center tm-section-title">Keluh Kesah Netizen</h2>
 						<p class="text-center">Selamat Datang di Web Pengaduan Masyarakat</p>
 						@if(Session('cek_login_masyarakat') == true)
 						<div class="card shadow mb-4">

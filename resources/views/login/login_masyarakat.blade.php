@@ -51,6 +51,9 @@
 								<div class="mt-4 text-center">
 									Tidak memiliki akun? <a href="/register_masyarakat">Register</a>
 								</div>
+								<div class="mt-4 text-center">
+									Masuk sebagai admin? <a href="/login_admin">Login</a>
+								</div>
 							</form>
 						</div>
 					</div>
