@@ -15,12 +15,13 @@
             <div class="card mt-2 mx-auto p-4">
                 <div class="card-body">
                     <div class="container">
-                    <form role="form" method="post" action="{{ url('/tanggapan/store') }}" enctype="multimedia/form-data">
+                    <form role="form" method="post" action="{{ url('/tanggapan/store', [$data->id_pengaduan]) }}" enctype="multimedia/form-data">
                         {{ csrf_field() }}
+                        @method('PUT')
                             <div class="controls">
                             <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group"> <label for="id_pengaduan">Nomor Pengaduan<span>*</span></label> <input id="id_pengaduan" type="text" name="id_pengaduan" class="form-control" required="required" value="{{$data->id_pengaduan}}"> </div>
+                                        <div class="form-group"> <label for="id_pengaduan">Nomor Pengaduan<span>*</span></label> <input id="id_pengaduan" type="text" name="id_pengaduan" class="form-control" required="required" value="{{$data->id_pengaduan}}" readonly> </div>
                                     </div>
 
                                 </div>
@@ -32,7 +33,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group"> <label for="tanggapan">Isi Tanggapan <span>*</span></label> <textarea id="tanggapan" name="tanggapan" class="form-control" placeholder="Tuliskan tanggapan Anda." rows="4" required="required" data-error="Tolong, tuliskan tanggapan Anda."></textarea> </div>
+                                        <div class="form-group"> <label for="tang`gapan">Isi Tanggapan <span>*</span></label> <textarea id="tanggapan" name="tanggapan" class="form-control" placeholder="Tuliskan tanggapan Anda." rows="4" required="required" data-error="Tolong, tuliskan tanggapan Anda."></textarea> </div>
                                     </div>
                                 </div>
                                 <div class="row">

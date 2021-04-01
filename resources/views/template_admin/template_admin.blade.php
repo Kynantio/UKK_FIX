@@ -68,6 +68,12 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                 <span>Pengaduan/Tanggapan</span></a>
             </li>
+
+            {{-- <li class="nav-item">
+                <a class="nav-link" href="{{url('/done')}}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                <span>Done</span></a>
+            </li> --}}
  
             <hr class="sidebar-divider d-none d-md-block">
 

@@ -93,6 +93,14 @@ class PengaduanController extends Controller
         return $pdf->stream();
     }
 
+    public function done()
+    {
+        $data = PengaduanModel::where('status', 'Selesai')->get();
+        $data->load('tanggapan');
+
+        return view('done', compact('data'));
+    }
+
     
 
 }

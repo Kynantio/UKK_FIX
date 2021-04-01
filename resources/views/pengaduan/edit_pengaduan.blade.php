@@ -25,7 +25,7 @@
                                     <option value="terkirim" selected>Terkirim</option>
                                     <option value="0" >Belum</option>
                                     <option value="proses" >Proses</option>
-                                    <option value="selesai" >Selesai</option>
+                                    {{-- <option value="selesai" >Selesai</option> --}}
                                     </select>
                                     @endif
                                     @if($data->status == '0')
@@ -33,7 +33,7 @@
                                     <option value="0" selected>Belum</option>
                                     <option value="terkirim" >Terkirim</option>
                                     <option value="proses" >Proses</option>
-                                    <option value="selesai" >Selesai</option>
+                                    {{-- <option value="selesai" >Selesai</option> --}}
                                     </select>
                                     @endif
                                     @if($data->status == 'proses')
@@ -41,12 +41,12 @@
                                     <option value="proses" selected>Proses</option>
                                     <option value="terkirim" >Terkirim</option>
                                     <option value="0" >Belum</option>
-                                    <option value="selesai" >Selesai</option>
+                                    {{-- <option value="selesai" >Selesai</option> --}}
                                     </select>
                                     @endif
                                     @if($data->status == 'selesai')
                                     <select class="form-control" id="status" name="status">
-                                    <option value="selesai" selected>Selesai</option>
+                                    {{-- <option value="selesai" selected>Selesai</option> --}}
                                     <option value="terkirim" >Terkirim</option>
                                     <option value="0" >Belum</option>
                                     <option value="proses" >Proses</option>

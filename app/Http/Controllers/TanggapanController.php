@@ -23,16 +23,39 @@ class TanggapanController extends Controller
         return view('create_tanggapan', compact('data'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request ,$id)
     {
-        if(Session()->has('id_petugas')){
-        TanggapanModel::create([
-            'id_pengaduan'      => $request->id_pengaduan,
-            'tgl_tanggapan'     => $request->tgl_tanggapan,
-            'tanggapan'         => $request->tanggapan,
-            'id_petugas'        => Session()->get('id_petugas'),
-        ]);    
-    }      
+    //     if(Session()->has('id_petugas')){
+    //     TanggapanModel::create([
+    //         'id_pengaduan'      => $request->id_pengaduan,
+    //         'tgl_tanggapan'     => $request->tgl_tanggapan,
+    //         'tanggapan'         => $request->tanggapan,
+    //         'id_petugas'        => Session()->get('id_petugas'),
+    //     ]);    
+
+        
+    // }      
+
+        $id_pengaduan = $request->id_pengaduan;
+        // $id_pengaduan =  PengaduanModel::get($id)->id_pengaduan;
+        // $id_petugas = Session::get('id_petugas')->id_petugas;
+        $id_petugas = Session()->get('id_petugas');
+        $tgl_tanggapan = $request->tgl_tanggapan; 
+        $tanggapan = $request->tanggapan; 
+
+        $data = new TanggapanModel();
+        $data->id_pengaduan = $id_pengaduan;
+        $data->tgl_tanggapan = $tgl_tanggapan;
+        $data->tanggapan = $tanggapan;
+        $data->id_petugas = $id_petugas;
+        $data->save();
+
+        PengaduanModel::where('id_pengaduan', $id)->update([
+            'status' => "Selesai",
+        ]);
+
+        // return $data;
+
         return redirect()->action('PengaduanController@index')->with('alert_message', 'Berhasil Melakukan Tanggapan');
     }
 

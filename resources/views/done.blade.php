@@ -4,7 +4,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Pengaduan</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Pengaduan Terselesaikan</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -36,30 +36,26 @@
                             <th>Tanggal Tanggapan</th>
                             <th>Tanggapan</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            {{-- <th>Action</th> --}}
                         </tr>
                     </thead>
-                    {{-- @if() --}}
-                    
                     @php $no=0; @endphp
-                    @foreach($data_tanggapan as $data)
+                    @foreach($data as $datas)
                     @php $no++; @endphp
-
-                    
                     <tbody>
                         <tr>
                             <td>{{$no}}</td>
-                            <td>{{$data->tgl_pengaduan}}</td>
-                            <td>{{$data->masyarakat->nama}}</td>
-                            <td>{{$data->isi_laporan}}</td>
-                            <td><img src="{{url('/images/'.$data->foto)}}"  style="max-width: 40px"></td>
+                            <td>{{$datas->tgl_pengaduan}}</td>
+                            <td>{{$datas->masyarakat->nama}}</td>
+                            <td>{{$datas->isi_laporan}}</td>
+                            <td><img src="{{url('/images/'.$datas->foto)}}"  style="max-width: 40px"></td>
                             <td>
-                            @foreach($data->tanggapan as $tanggapan)
+                            @foreach($datas->tanggapan as $tanggapan)
                                 <li>{{$tanggapan->tgl_tanggapan}}</li> 
                             @endforeach
                             </td>
                             <td>
-                            @foreach($data->tanggapan as $tanggapan)
+                            @foreach($datas->tanggapan as $tanggapan)
                             <div class="w-100 d-flex justify-content-between">
                             <span>{{$tanggapan->tanggapan}}</span> 
                             <a href="{{url('/tanggapan/edit/'. $tanggapan->id_tanggapan)}}">
@@ -68,19 +64,14 @@
                             </a>
                             @endforeach
                             </td>
-                            <td>{{$data->status}}</td>
-                            <td>
-                                @if($data->status === "selesai")
-                                @else
-                                <a href="{{url('/tanggapan/create/' . $data->id_pengaduan)}}" class="btn btn-success btn-sm btn-center-block">Tanggapan</a> 
-                                <a href="{{url('/pengaduan/edit/'. $data->id_pengaduan)}}" class="btn btn-warning btn-sm btn-center-block">Ganti Status</a>
-                                @endif
-                            <a href="/pengaduan/hapus/{{ $data->id_pengaduan }}" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus data?')">Delete</a>
-                            </td>
+                            <td>{{$datas->status}}</td>
+                            {{-- <td> --}}
+                            {{-- <a href="{{url('/tanggapan/create/' . $datas->id_pengaduan)}}" class="btn btn-success btn-sm btn-center-block">Tanggapan</a> 
+                            <a href="{{url('/pengaduan/edit/'. $datas->id_pengaduan)}}" class="btn btn-warning btn-sm btn-center-block">Ganti Status</a>
+                            <a href="/pengaduan/hapus/{{ $datas->id_pengaduan }}" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus data?')">Delete</a> --}}
+                            {{-- </td> --}}
                         </tr>
                     </tbody>
-                    
-
                     @endforeach
                 </table>
                 </div>

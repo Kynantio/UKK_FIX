@@ -55,13 +55,14 @@ Route::group(['middleware'=>'cek_login'],function(){
     Route::post('/tanggapan/update/{id}/save', "TanggapanController@update")->name('editTanggapan');
     Route::get('/create_tanggapan','TanggapanController@create')->name('tanggapanGet');
     Route::get('/tanggapan/create/{id}','TanggapanController@create');
-    Route::post('/tanggapan/store/','TanggapanController@store')->name('tanggapan.store');
+    Route::put('tanggapan/store/{id}','TanggapanController@store')->name('tanggapan.store');
     Route::get('/tanggapan/hapus/{id}', "TanggapanController@hapus");
     Route::get('/tanggapan/detail/{id}', "TanggapanController@detail");
     Route::get('/tanggapan/cetak_pdf_tanggapan',"TanggapanController@cetak_pdf");
 
     Route::get('/dashboard','LoginController@dashboard');
 
+    Route::get('done','PengaduanController@done');
 });
 
 /* LOGIN USER */ 
