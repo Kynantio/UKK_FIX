@@ -62,7 +62,7 @@ Route::group(['middleware'=>'cek_login'],function(){
 
     Route::get('/dashboard','LoginController@dashboard');
 
-    Route::get('done','PengaduanController@done');
+    // Route::get('done','PengaduanController@done');
 });
 
 /* LOGIN USER */ 
